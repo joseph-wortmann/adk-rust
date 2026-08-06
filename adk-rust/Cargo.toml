@@ -69,12 +69,12 @@ full = [
 # Gemini Enterprise Agent Platform — every Vertex/EAP integration except
 # realtime transports. The right default for ReasoningEngine BYOC deployments
 # (request/response + SSE agents). Composable with any tier:
-#   features = ["minimal", "agent-platform"]
+#   features = ["minimal", "gemini-agent-platform"]
 # Excluded: deploy-time tooling (host-side, not part of the agent container)
-# and `vertex-live` (build weight — see `agent-platform-full`).
+# and `vertex-live` (build weight — see `gemini-agent-platform-full`).
 # Growth rule: every PR that introduces a Vertex/EAP feature flag appends it
-# here (or to `agent-platform-full` if it pulls in a realtime transport).
-agent-platform = [
+# here (or to `gemini-agent-platform-full` if it pulls in a realtime transport).
+gemini-agent-platform = [
     # existing integrations (Wave 0 initial content)
     "gemini-vertex",  # Vertex model backend (adk-model → adk-gemini/vertex)
     "vertex-session", # managed Sessions (adk-session)
@@ -94,10 +94,10 @@ agent-platform = [
     # "vertex-skill-registry",  Skill Registry consumption (adk-skill)
 ]
 
-# agent-platform + realtime: adds the Vertex AI Live API (bidirectional
+# gemini-agent-platform + realtime: adds the Vertex AI Live API (bidirectional
 # audio/video), which pulls in the adk-realtime WebSocket/audio stack.
-agent-platform-full = [
-    "agent-platform",
+gemini-agent-platform-full = [
+    "gemini-agent-platform",
     "vertex-live", # Vertex AI Live API (adk-realtime)
 ]
 

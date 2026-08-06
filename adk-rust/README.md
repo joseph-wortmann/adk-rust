@@ -306,10 +306,10 @@ adk-rust = { version = "2.0.0", features = ["full"] }
 # realtime transports; composable with any tier. The right default for
 # ReasoningEngine BYOC deployments. Deploy-time tooling is host-side and
 # not included.
-adk-rust = { version = "2.0.0", features = ["standard", "agent-platform"] }
+adk-rust = { version = "2.0.0", features = ["standard", "gemini-agent-platform"] }
 
-# agent-platform + Vertex AI Live API (pulls in the realtime WebSocket/audio stack)
-adk-rust = { version = "2.0.0", features = ["standard", "agent-platform-full"] }
+# gemini-agent-platform + Vertex AI Live API (pulls in the realtime WebSocket/audio stack)
+adk-rust = { version = "2.0.0", features = ["standard", "gemini-agent-platform-full"] }
 
 # Custom
 adk-rust = { version = "2.0.0", default-features = false, features = ["agents", "gemini", "tools"] }
