@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **`agent-platform` / `agent-platform-full` umbrella meta-features.** One
+  switch that pulls in every Gemini Enterprise Agent Platform (Vertex/EAP)
+  integration, composable with any tier preset:
+  `features = ["standard", "agent-platform"]`. The base variant covers
+  `gemini-vertex`, `vertex-session`, and `gcp-secrets` (growing as later
+  platform integrations land) and excludes realtime transports — the right
+  default for ReasoningEngine BYOC deployments. `agent-platform-full` adds
+  `vertex-live` (Vertex AI Live API, which pulls in the adk-realtime stack).
+  Deploy-time tooling is host-side and excluded from both.
+
 ### Fixed
 
 - **Inline and file content metadata survives session persistence.**
